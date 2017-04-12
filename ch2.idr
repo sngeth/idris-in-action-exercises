@@ -42,3 +42,8 @@ counts word =
 top_ten : Ord a => List a -> List a
 top_ten list =
   take 10 $ sortBy(\x, y => y `compare` x) $ list
+
+-- Ex 8
+over_length : Nat -> List String -> Nat
+over_length max_length a_list =
+  length $ filter (\x => length x > max_length) a_list
